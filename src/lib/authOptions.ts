@@ -16,6 +16,7 @@ export const authOptions = {
           type: "password",
         },
       },
+      //@ts-ignore
       async authorize(credentials) {
         const url = process.env.NEXT_PUBLIC_API_URL + "/login";
         const formData = new URLSearchParams();
