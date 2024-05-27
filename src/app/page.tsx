@@ -4,6 +4,7 @@ import { SignUpForm } from "@/interfaces/SignUpForm";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { signIn } from "next-auth/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -191,6 +192,15 @@ export default function Home() {
                 >
                   {loading ? <>Loading...</> : <>Continue</>}
                 </button>
+                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                  Already have an account?{" "}
+                  <Link
+                    href="/login"
+                    className="font-medium text-purple-600 hover:underline"
+                  >
+                    Sign in
+                  </Link>
+                </p>
               </form>
             </div>
           </div>
